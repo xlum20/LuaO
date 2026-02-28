@@ -2,7 +2,9 @@
 Documentation:
 
 # JAVASCRIPT!!!!!:
-```const { url } = await fetch(`https://raw.githubusercontent.com/xlum20/LuaO/refs/heads/main/tunnel-url.json'
+
+```
+const { url } = await fetch('https://raw.githubusercontent.com/xlum20/LuaO/refs/heads/main/tunnel-url.json'
 ).then(r => r.json());
 
 const res = await fetch(`${url}/transpile`, {
@@ -16,7 +18,8 @@ console.log(result);
 ```
 
 # CURL / BASH:
-```URL=$(curl -s https://raw.githubusercontent.com/xlum20/LuaO/refs/heads/main/tunnel-url.json | python3 -c "import sys,json; print(json.load(sys.stdin)['url'])")
+```
+URL=$(curl -s https://raw.githubusercontent.com/xlum20/LuaO/refs/heads/main/tunnel-url.json | python3 -c "import sys,json; print(json.load(sys.stdin)['url'])")
 
 curl -X POST "$URL/transpile" \
   -H "Content-Type: application/json" \
@@ -24,7 +27,8 @@ curl -X POST "$URL/transpile" \
   ```
 
   # LUA:
-```local json = require("json") -- or use your json lib
+```
+local json = require("json")
 
 local function getUrl()
   local handle = io.popen("curl -s https://raw.githubusercontent.com/xlum20/LuaO/refs/heads/main/tunnel-url.json")
