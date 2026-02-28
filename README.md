@@ -2,8 +2,7 @@
 Documentation:
 
 # JAVASCRIPT!!!!!:
-```const { url } = await fetch(
-  'https://raw.githubusercontent.com/xlum20/LuaO/refs/heads/main/tunnel-url.json'
+```const { url } = await fetch(`https://raw.githubusercontent.com/xlum20/LuaO/refs/heads/main/tunnel-url.json'
 ).then(r => r.json());
 
 const res = await fetch(`${url}/transpile`, {
