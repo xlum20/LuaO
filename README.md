@@ -50,4 +50,8 @@ local function transpile(code)
   return result:match('"result"%s*:%s*"(.-[^\\])"')
 end
 
-print(transpile("local x: number = 5"))```
+print(transpile("local x: number = 5"))
+```
+All of them result to this being outputted as the json being {"result":"-- luao: /var/folders/kx/9jtnw0113r15dn708ldt33tm0000gp/T/bff5ec78-b273-45df-932d-384d6a4efd22.luau -> /var/folders/kx/9jtnw0113r15dn708ldt33tm0000gp/T/bff5ec78-b273-45df-932d-384d6a4efd22.lua\n\nlocal x = 5\n"}
+                                                                                                  code here for retards!! {^}
+{"result":"-- luao:JUNK FILES\n\nlocal x = 5\n"}
