@@ -1,8 +1,8 @@
-# LuaO
+# ~~~LuaO~~~
 Documentation:
 
-JAVASCRIPT!!!!!:
-const { url } = await fetch(
+# JAVASCRIPT!!!!!:
+```const { url } = await fetch(
   'https://raw.githubusercontent.com/xlum20/LuaO/refs/heads/main/tunnel-url.json'
 ).then(r => r.json());
 
@@ -14,16 +14,18 @@ const res = await fetch(`${url}/transpile`, {
 
 const { result } = await res.json();
 console.log(result);
+```
 
-CURL / BASH:
-URL=$(curl -s https://raw.githubusercontent.com/xlum20/LuaO/refs/heads/main/tunnel-url.json | python3 -c "import sys,json; print(json.load(sys.stdin)['url'])")
+# CURL / BASH:
+```URL=$(curl -s https://raw.githubusercontent.com/xlum20/LuaO/refs/heads/main/tunnel-url.json | python3 -c "import sys,json; print(json.load(sys.stdin)['url'])")
 
 curl -X POST "$URL/transpile" \
   -H "Content-Type: application/json" \
   -d '{"code": "local x: number = 5"}'
+  ```
 
-  LUA:
-  local json = require("json") -- or use your json lib
+  # LUA:
+```local json = require("json") -- or use your json lib
 
 local function getUrl()
   local handle = io.popen("curl -s https://raw.githubusercontent.com/xlum20/LuaO/refs/heads/main/tunnel-url.json")
@@ -45,4 +47,4 @@ local function transpile(code)
   return result:match('"result"%s*:%s*"(.-[^\\])"')
 end
 
-print(transpile("local x: number = 5"))
+print(transpile("local x: number = 5"))```
